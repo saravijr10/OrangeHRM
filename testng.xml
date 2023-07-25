@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM">
+  <test thread-count="1" name="Login">
+    <classes>      	
+      <class name="testClassPkg.TestLoginPage">
+      	<methods>
+      		<exclude name="invalidLoginPage"></exclude>
+      	</methods>
+      </class>
+    </classes>
+  </test>
+  <test thread-count="1" name="valid and Invalid Credentials">
+    <classes>      	
+      <class name="testClassPkg.TestLoginPage">
+      </class>
+    </classes>
+  </test>
+  <test name="PersonalDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="personalDetailsform"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="ContactDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="contactDetailsForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="EmergencyContact">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="emergencyContactForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="SocialMediaDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="SocialMediaForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+  <test name="DependentsDetails">
+  	<classes>
+  		<class name="testClassPkg.TestMyInfoModule">
+  			<methods>
+  			<include name="loginToApplication"></include>
+      		<include name="DependentForm"></include>
+      	</methods>
+  		</class>
+  	</classes>
+  </test>
+</suite>
